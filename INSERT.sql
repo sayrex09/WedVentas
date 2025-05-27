@@ -1,3 +1,4 @@
+-- SQLBook: Code
 -- Active: 1747267210513@@127.0.0.1@3306@wed
 SELECT *FROM usuarios;
 SELECT *FROM proyectos;
