@@ -1,0 +1,6 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.debug.settings.onBuildFailureProceed": true,
+    "maven.view": "flat",
+    "liveServer.settings.port": 5501
+}
