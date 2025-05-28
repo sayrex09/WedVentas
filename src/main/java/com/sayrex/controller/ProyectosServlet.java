@@ -35,18 +35,23 @@ public class ProyectosServlet extends HttpServlet {
             ProyectosDAO dao = new ProyectosDAO(conn);
             List<ProyectosDTO> lista = dao.listar(usuario.getIdUsuario(), offset, limit);
             int total = dao.contar(usuario.getIdUsuario());
-
+        
+            int paginas = (int) Math.ceil((double) total / limit);  // 👈 AQUÍ SE CALCULA
+        
+            // 👉 Enviar los datos al JSP
             request.setAttribute("lista", lista);
             request.setAttribute("pagina", pagina);
             request.setAttribute("total", total);
             request.setAttribute("limit", limit);
-
+            request.setAttribute("paginas", paginas);  // 👈 AQUÍ LO PASAS AL JSP
+        
             request.getRequestDispatcher("views/vendedor/listaProyectos.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
             request.setAttribute("error", "Error al cargar proyectos");
             request.getRequestDispatcher("views/vendedor/listaProyectos.jsp").forward(request, response);
         }
+
     }
 
     @Override

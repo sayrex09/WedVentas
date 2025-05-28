@@ -25,7 +25,8 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Lenguaje</label>
-                    <input type="text" name="lenguaje" class="form-control" required value="<%= esEdicion ? p.getLenguajeProgramacion() : "" %>">
+                    <input type="text" name="lenguaje_programacion" class="form-control" required value="<%= esEdicion ? p.getLenguajeProgramacion() : "" %>">
+
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Descripción</label>

@@ -37,18 +37,12 @@
                 </tr>
             </thead>
             <tbody>
-                <c:forEach var="p" items="${lista}">
-                    <tr>
-                        <td>${p.titulo}</td>
-                        <td>${p.lenguaje}</td>
-                        <td>$${p.precio}</td>
-                        <td>${p.estado}</td>
-                        <td>
-                            <a href="ProyectoServlet?action=editar&id=${p.id}" class="btn btn-warning btn-sm">Editar</a>
-                            <a href="ProyectoServlet?action=eliminar&id=${p.id}" class="btn btn-danger btn-sm">Eliminar</a>
-                        </td>
-                    </tr>
+                <c:forEach var="i" begin="1" end="${paginas}">
+                    <li class="page-item ${i == pagina ? 'active' : ''}">
+                        <a class="page-link" href="ProyectoServlet?pagina=${i}">${i}</a>
+                    </li>
                 </c:forEach>
+
             </tbody>
         </table>
 
