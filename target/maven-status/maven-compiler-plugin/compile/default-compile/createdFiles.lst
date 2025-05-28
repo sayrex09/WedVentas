@@ -27,6 +27,7 @@ com/sayrex/model/Suscripcion.class
 com/sayrex/model/HistorialPago.class
 com/sayrex/model/Rol.class
 com/sayrex/model/Notificacion.class
+com/sayrex/controller/AdminServlet.class
 com/sayrex/dto/UsuarioDTO.class
 com/sayrex/model/Proyectos.class
 com/sayrex/model/ProyectoTag.class

@@ -27,7 +27,7 @@ public class LoginServlet extends HttpServlet {
                 // Redirigir por rol
                 switch (u.getIDRol()) {
                     case "admin": response.sendRedirect("views/admin/dashboard.jsp"); break;
-                    case "vendedor": response.sendRedirect("views/vendedor/inicio.jsp"); break;
+                    case "vendedor": response.sendRedirect("views/vendedor/dashboard.jsp"); break;
                     case "usuario": response.sendRedirect("views/usuario/dashboard.jsp"); break;
                     default: response.sendRedirect("login.jsp"); break;
                 }

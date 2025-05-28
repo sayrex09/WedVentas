@@ -1,4 +1,4 @@
-SELECT * FROM usuarios;
+SELECT * FROM proyectos;
 
 USE wed;
 -- Roles
